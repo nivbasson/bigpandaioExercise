@@ -1,0 +1,6 @@
+---
+- name: copy big app
+  copy: src=big-app dest=/tmp/ owner=root group=root mode=755
+
+- name: npm install
+  npm: path=/tmp/big-app

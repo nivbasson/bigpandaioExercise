@@ -6,10 +6,9 @@
     - name: Set hostname
       hostname: name={{inventory_hostname}}
 
-- name: Localhost Big-Panda service
-  hosts: all
+- name: Base bamboo service
+  hosts: base
   sudo: yes
   roles:
     - { role: nodejs, tags: nodejs }
-    - { role: big-service, tags: big-service }
-    - { role: panda-service, tags: panda-service }
+    - { role: bamboo, tags: bamboo }
